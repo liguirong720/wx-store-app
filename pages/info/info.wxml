@@ -1,0 +1,9 @@
+<view class="infos" id="infos_wrap">
+    <view class="i-item" wx:for="{{infos}}" wx:key="id">
+        <view class="title">{{item.title}}</view>
+        <view class="date">{{item.date}}</view>
+        <image class="img" src="{{item.image}}" />
+        <view class="sum">{{item.summary}}</view>
+        <navigator class="all">Read All</navigator>
+    </view>
+</view>

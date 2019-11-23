@@ -1,0 +1,24 @@
+<swiper class="slides" autoplay="{{slides.length > 0}}" indicator-dots="{{slides.length > 1}}" indicator-color="#bcc0c9" indicator-active-color="#3a4861">
+    <swiper-item wx:for="{{slides}}" wx:key="id">
+        <navigator wx:if="{{item.link}}" url="{{item.link}}">
+            <image src="{{item.image}}" mode="aspectFill"></image>
+        </navigator>
+        <image wx:else src="{{item.image}}" mode="aspectFill"></image>
+    </swiper-item>
+</swiper>
+
+<view class="grids">
+    <navigator class="g-item" wx:for="{{categories}}" wx:key="id" url="/pages/list/list?cat={{item.id}}&from={{item.title}}">
+        <image src="{{item.icon}}"></image>
+        <text class="g-item-text">{{item.name}}</text>
+    </navigator>
+</view>
+
+<view class="links">
+    <navigator>
+        <image class="l-img" src="../../images/link-01.png" />
+    </navigator>
+    <navigator>
+        <image class="l-img" src="../../images/link-02.png" />
+    </navigator>
+</view>

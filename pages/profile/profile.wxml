@@ -1,0 +1,16 @@
+<view class="avatar">
+    <button class="a-btn" wx:if="{{!hasLogin}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+    <image class="a-img" wx:else src="{{userInfo.avatarUrl}}" />
+</view>
+
+<view class="cells">
+    <view class="c-item">个人资料</view>
+    <view class="c-item">我的优惠券</view>
+    <view class="c-div"></view>
+    <view class="c-item">常见问题</view>
+    <view class="c-item">使用条款</view>
+    <view class="c-item">隐私权政策</view>
+    <view class="c-item">联系客服</view>
+    <view class="c-div"></view>
+    <view class="c-item">设置</view>
+</view>

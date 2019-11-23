@@ -1,0 +1,13 @@
+<video class="video-player" controls="{{true}}" id="myVideo" src="{{videoSrc}}" enable-danmu="{{true}}" danmu-btn="{{true}}" danmu-list="{{dammuList}}"/>
+
+<view class="danmuArea">
+    <input class="d-input" placeholder="输入弹幕" bindblur="addDanmu"/>
+    <button class="d-btn" bind:tap="sendDanmu">返送</button>
+</view>
+
+<view class="video-list">
+    <view class="video-bar" wx:for="{{videoList}}" wx:key="video-{{item.id}}" data-url="{{item.url}}" bind:tap="playVideo">
+        <image class="video-icon" src="../../images/paly.png"/>
+        <text class="video-title">{{item.title}}</text>
+    </view>
+</view>
